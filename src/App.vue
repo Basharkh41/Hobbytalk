@@ -47,7 +47,9 @@ const handleSignOut = () => {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-
+.ss{
+  margin-right: auto;
+}
 *{
   box-sizing: border-box;
   margin: 0;
