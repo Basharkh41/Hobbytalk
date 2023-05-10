@@ -48,5 +48,6 @@ const signIn = () => { // we also renamed this method
 <style>
 .login{
   text-align: center;
+  
 }
 </style>

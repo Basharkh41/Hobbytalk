@@ -1,6 +1,8 @@
 <template>
+  <div class="ss">
 <router-link to="/" exact> <img src="logo.png"> </router-link>
-  <div class="router-link">
+</div>  
+<div class="router-link">
     <nav>
       <ul class="nav_links">
       <li><router-link to="/feed" exact> Feed </router-link> </li>
@@ -11,8 +13,11 @@
       <li><router-link to="/register" exact> Register </router-link></li> 
       <li><router-link to="/sign-in" exact> Login </router-link></li>
       </ul>
-    </nav>
-    <router-view/>
+    </nav>    
+</div>
+
+<div>
+  <router-view/>
 </div>
 </template>
 
@@ -49,6 +54,7 @@ const handleSignOut = () => {
   padding: 0;
   background-color: #2d2e33;
 }
+
 li, a{
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -56,6 +62,7 @@ li, a{
   color: black;
   text-decoration: none;
 }
+
 .router-link{
   display: flex;
   justify-content: flex-end;
@@ -68,7 +75,6 @@ li, a{
 }
 img{
   position: absolute; 
-  padding-left: 5%;
 }
 .nav_links li {
   display: inline-block;
