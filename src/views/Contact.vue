@@ -47,8 +47,9 @@
 
 <style>
 *{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
     margin: 0;
-    font-size: 14px;
+    font-size: 25px;
 }
 
 .container{
@@ -56,7 +57,7 @@
     margin: 50px auto;
 }
 .contact-box{
-    background-color: #fff;
+    background-color: #000000;
     display: flex;
 }
 .contact-left{
@@ -66,10 +67,12 @@
 .contact-right{
     flex-basis: 40%;
     padding: 40px;
-    color: #fff;
+    color: #000000;
+
 }
 h1{
-    margin-bottom: 10px;
+    padding-bottom: 70px;
+    
     font-size: 30px;
     color: #FE4E69;
 }
@@ -88,17 +91,19 @@ h3{
     flex-basis: 45%;
 }
 p{
-    font-size: 20px;
-    color: #fff;
+    font-size: 30px;
+    color: #000000;
     text-align: center;
+    padding-bottom: 10px;
 }
 input{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
     width: 100%;
     border: none;
     border-bottom: 1px solid #ccc;
     outline: none;
     padding-bottom: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 textarea{
     width: 100%;
@@ -106,7 +111,7 @@ textarea{
     outline: none;
     padding: 10px;
     box-sizing: border-box;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 label{
     margin-bottom: 6px;
@@ -114,20 +119,30 @@ label{
     color: #FE4E69;
 }
 .Send{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
     background-color: #FE4E69;
     width: 100px;
     border: none;
     outline: none;
     color: #fff;
-    height: 35px;
-    border-radius: 30px;
+    border: none;
+    border-radius: 4px;
+    padding-top: 0px;
     margin-top: 20px;
-    box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+    cursor: pointer;
+    font-weight: bold;
 }
+.Send:hover{
+  background-color: rgb(0, 0, 0);
+  color: #FE4E69;
+  font-weight:bold;
+}
+
 .contact-left h3{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
     font-weight: 600;
-    margin-bottom: 30px;
-    font-size: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
 }
 
 tr td:first-child{

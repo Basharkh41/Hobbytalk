@@ -36,33 +36,38 @@ const register = () => {
 
 <style>
 h1{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+  font-size: 80px;
   color: #FE4E69;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 250px;
+  margin-bottom: 40px;
 }
 .register-form{
   text-align: center;
 }
 input{
   text-align: center;
-  padding-bottom: 10;
-  color: #fff;
+  font-size: 20px;
+  color: #000000;
   border-bottom: 2px solid;
+  border-color: #ffffff;
 }
 .register-button{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
   width: 10%;
   padding: 10px;
   background-color: #FE4E69;
-  color: #fff;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   padding-top: 10px;
-  margin-top: 10px;
+  margin-top: 40px;
   cursor: pointer;
   font-weight: bold;
 }
 .register-button:hover{
-  background-color: green;
+  background-color: rgb(0, 0, 0);
   color: #FE4E69;
   font-weight:bold;
 }
