@@ -1,6 +1,6 @@
 <template>
     <h1> Feed </h1>
-    <h3> Welcome </h3>
+    <h3> Welcome to Hobbytalk, you can </h3>
 </template>
 
 <script setup>
@@ -20,7 +20,7 @@ onBeforeUnmount(() => {
     // clear up listener
     authListener()
 })
-  
+
 </script>
 <style>
 

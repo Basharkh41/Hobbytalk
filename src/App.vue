@@ -61,7 +61,7 @@ li, a{
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 
