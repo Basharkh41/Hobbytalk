@@ -7,11 +7,11 @@
       <ul class="nav_links">
       <li><router-link to="/feed" exact> Feed </router-link> </li>
       <li> <router-link to="/Contact" exact> Contact </router-link></li>
+      <li><router-link to="/register" exact> Register </router-link></li> 
+      <li><router-link to="/sign-in" exact> Login </router-link></li>
       <li v-if="isLoggedIn">
          <button @click="handleSignOut"> Logout </button> 
       </li>
-      <li><router-link to="/register" exact> Register </router-link></li> 
-      <li><router-link to="/sign-in" exact> Login </router-link></li>
       </ul>
     </nav>    
 </div>
@@ -88,6 +88,8 @@ img{
 .nav_links li a:hover{
   color: #FE4E69;
 }
-
+button:hover{
+font-weight: 200;
+}
 
 </style>

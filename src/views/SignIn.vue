@@ -5,7 +5,7 @@
     <p> <input type='text' placeholder="Email" v-model='email'/> </p>
     <p> <input type='password' placeholder="Password" v-model='password'/> </p>
     <p v-if="errMsg"> {{ errMsg }} </p>
-    <p> <button @click="signIn"> Submit </button> </p>
+    <p> <button class="login-button" @click="signIn"> Submit </button> </p>
     </div>
     </body>
 </template>
@@ -49,5 +49,22 @@ const signIn = () => { // we also renamed this method
 .login{
   text-align: center;
   
+}
+.login-button{
+  width: 10%;
+  padding: 10px;
+  background-color: #FE4E69;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding-top: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.login-button:hover{
+  background-color: green;
+  color: #FE4E69;
+  font-weight:bold;
 }
 </style>

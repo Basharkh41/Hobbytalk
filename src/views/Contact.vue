@@ -23,7 +23,7 @@
 
                 <label> Message </label>
                 <textarea row="5" name="Message" required></textarea>
-                <button type="submit">Send</button>
+                <button type="submit" class="Send">Send</button>
             </form>          
         </div>
         <div class="contact-right">
@@ -89,6 +89,8 @@ h3{
 }
 p{
     font-size: 20px;
+    color: #fff;
+    text-align: center;
 }
 input{
     width: 100%;
@@ -96,6 +98,7 @@ input{
     border-bottom: 1px solid #ccc;
     outline: none;
     padding-bottom: 5px;
+    color: white;
 }
 textarea{
     width: 100%;
@@ -103,13 +106,14 @@ textarea{
     outline: none;
     padding: 10px;
     box-sizing: border-box;
+    color: white;
 }
 label{
     margin-bottom: 6px;
     display: block;
     color: #FE4E69;
 }
-button{
+.Send{
     background-color: #FE4E69;
     width: 100px;
     border: none;
@@ -137,7 +141,6 @@ tr td{
 }
 img{
     position: absolute;
-    padding-left: 55%;
 }
 td{
     font-size: 20px;

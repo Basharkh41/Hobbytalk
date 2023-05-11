@@ -1,6 +1,6 @@
 <template>
     <h1> Feed </h1>
-    <h3> This page is for users only </h3>
+    <h3> Welcome </h3>
 </template>
 
 <script setup>
@@ -22,3 +22,6 @@ onBeforeUnmount(() => {
 })
   
 </script>
+<style>
+
+</style>
