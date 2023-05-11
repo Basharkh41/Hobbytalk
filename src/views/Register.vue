@@ -39,8 +39,8 @@ h1{
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
   font-size: 80px;
   color: #FE4E69;
+  margin-top: 5%;
   text-align: center;
-  margin-top: 250px;
   margin-bottom: 40px;
 }
 .register-form{

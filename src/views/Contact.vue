@@ -72,8 +72,7 @@
 }
 h1{
     padding-bottom: 70px;
-    
-    font-size: 30px;
+    font-size: 80px;
     color: #FE4E69;
 }
 h3{
