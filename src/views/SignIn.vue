@@ -58,12 +58,12 @@ const signIn = () => { // we also renamed this method
   border: none;
   border-radius: 4px;
   padding-top: 10px;
-  margin-top: 10px;
+  margin-top: 40px;
   cursor: pointer;
   font-weight: bold;
 }
 .login-button:hover{
-  background-color: green;
+  background-color: rgb(0, 0, 0);
   color: #FE4E69;
   font-weight:bold;
 }
