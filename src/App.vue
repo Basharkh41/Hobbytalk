@@ -1,16 +1,16 @@
 <template>
-  <div class="ss">
+  <div class="Logo">
 <router-link to="/" exact> <img src="logo.png"> </router-link>
 </div>  
 <div class="router-link">
     <nav>
       <ul class="nav_links">
-      <li><router-link to="/feed" exact> Feed </router-link> </li>
-      <li> <router-link to="/Contact" exact> Contact </router-link></li>
-      <li><router-link to="/register" exact> Register </router-link></li> 
-      <li><router-link to="/sign-in" exact> Login </router-link></li>
+      <li><router-link v-if="isLoggedIn || !isLoggedIn" to="/feed" exact> Feed </router-link> </li>
+      <li> <router-link v-if="isLoggedIn || !isLoggedIn"  to="/Contact" exact> Contact </router-link></li>
+      <li><router-link v-if="!isLoggedIn" to="/register" exact> Register </router-link></li> 
+      <li><router-link v-if="!isLoggedIn" to="/sign-in" exact> Login </router-link></li>
       <li v-if="isLoggedIn">
-         <button @click="handleSignOut"> Logout </button> 
+         <button class="Logout-button" @click="handleSignOut"> Logout </button> 
       </li>
       </ul>
     </nav>    
@@ -30,6 +30,7 @@ const router = useRouter()
 
 const isLoggedIn = ref(true)
 
+
 // runs after firebase is initialized
 onAuthStateChanged(getAuth(),function(user) {
     if (user) {
@@ -47,16 +48,13 @@ const handleSignOut = () => {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-.ss{
+.Logo{
   margin-right: auto;
 }
 *{
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
 }
-
 li, a{
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -80,7 +78,7 @@ li, a{
 .nav_links{
   list-style: none;
 }
-img{
+.Logo img{
   position: absolute; 
 }
 .nav_links li {
@@ -95,8 +93,17 @@ img{
 .nav_links li a:hover{
   color: #FE4E69;
 }
-button:hover{
-font-weight: 200;
+
+.Logout-button{
+  font-size: 18px;
+  height: 40px;
+  width: 70px;
+}
+
+.Logout-button:hover{
+  color: #FE4E69;
+  background-color: black;
+  cursor: pointer;
 }
 
 </style>
