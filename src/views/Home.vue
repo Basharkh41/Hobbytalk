@@ -7,7 +7,7 @@
   </div>
   <div class="Home-Container">
     <div class="section">
-      <h2>About Hobbymeet</h2>
+      <h2>About Hobbymeet:</h2>
       <p></p>
     </div>
     <div class="section">
@@ -22,13 +22,15 @@
           <p>Samuel Lins, 4cWI</p>
         </div>
       </div>
-      <div class="section">
+      <div class="sucuk">
         <h2>Our Goals</h2>
+      <div class="sucuk_li">
         <ul>
           <li>Make it easier for students to meet other students</li>
           <li>support practicing hobbies instead of being inactive</li>
           <li>better the unity of students from different classes</li>
         </ul>
+      </div>
       </div>
     </div>
   </div>
@@ -36,23 +38,30 @@
     <p>&copy; 2023 Hobbymeet. All rights reserved.</p>
   </div>
 </template>
+
+
 <style>
 .Home-Container {
   padding: 50px;
 }
 h1 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #fe4e69;
-  font-size: 50px;
+  font-size: 80px;
   text-align: center;
   margin-top: 5%;
 }
 .section h2 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 50px;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 15%;
 }
 .section {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  
+ 
+  
 }
 
 .section h2 {
@@ -61,19 +70,41 @@ h1 {
 .Creators {
   display: flex;
   flex-direction: row;
+  transform: scale(0.5);
+
+  
+  
 }
 .Creators p {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: center;
   font-size: 30px;
+  
 }
 .Creator-Samuel .Creator-Bashar img {
   flex: 1;
-  width: 100%;
-  height: auto;
+  
+
+ 
+}
+
+.sucuk{
+  padding-top: 10px;
+}
+.sucuk_li{
+  padding-top: 100px ;
+  text-align: center;
+  font-size: ;
 }
 
 .footer p{
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: right;
   font-size: 20px;
 }
+
+.ul{
+  padding: 10px
+}
 </style>
+
