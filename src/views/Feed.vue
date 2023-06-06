@@ -1,6 +1,8 @@
 <template>
-    <h1> Feed </h1>
-</template>
+<div>
+      <router-link to="/Add-Event">Add an event</router-link>
+    </div>
+  </template>
 
 <script setup>
 import { getAuth,onAuthStateChanged } from 'firebase/auth'
@@ -19,8 +21,4 @@ onBeforeUnmount(() => {
     // clear up listener
     authListener()
 })
-
 </script>
-<style>
-
-</style>

@@ -21,6 +21,10 @@ const router = createRouter({
         {
             path: '/Contact',
             component: () => import('../views/Contact.vue'),   
+        },
+        {
+            path:'/Add-Event',
+            component: () => import('../views/Add-Event.vue'),
         }
     ]
 })
