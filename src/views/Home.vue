@@ -59,6 +59,7 @@ h1 {
 }
 .section {
   margin-bottom: 10px;
+  padding-right: 1000px;
   
  
   
@@ -71,7 +72,7 @@ h1 {
   display: flex;
   flex-direction: row;
   transform: scale(0.5);
-
+  
   
   
 }
@@ -101,10 +102,12 @@ h1 {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: right;
   font-size: 20px;
+  margin-top: 100px;
 }
 
 .ul{
-  padding: 10px
+  padding: 10px;
+  
 }
 </style>
 
