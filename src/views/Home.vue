@@ -24,13 +24,13 @@
       </div>
       <div class="sucuk">
         <h2>Our Goals</h2>
-      <div class="sucuk_li">
-        <ul>
-          <li>Make it easier for students to meet other students</li>
-          <li>support practicing hobbies instead of being inactive</li>
-          <li>better the unity of students from different classes</li>
-        </ul>
-      </div>
+        <div class="sucuk_li">
+          <ul>
+            <li>Make it easier for students to meet other students</li>
+            <li>support practicing hobbies instead of being inactive</li>
+            <li>better the unity of students from different classes</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -38,7 +38,6 @@
     <p>&copy; 2023 Hobbymeet. All rights reserved.</p>
   </div>
 </template>
-
 
 <style>
 .Home-Container {
@@ -60,9 +59,6 @@ h1 {
 .section {
   margin-bottom: 10px;
   padding-right: 1000px;
-  
- 
-  
 }
 
 .section h2 {
@@ -72,42 +68,33 @@ h1 {
   display: flex;
   flex-direction: row;
   transform: scale(0.5);
-  
-  
-  
 }
 .Creators p {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: center;
   font-size: 30px;
-  
 }
 .Creator-Samuel .Creator-Bashar img {
   flex: 1;
-  
-
- 
 }
 
-.sucuk{
+.sucuk {
   padding-top: 10px;
 }
-.sucuk_li{
-  padding-top: 100px ;
+.sucuk_li {
+  padding-top: 100px;
   text-align: center;
   font-size: ;
 }
 
-.footer p{
+.footer p {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: right;
   font-size: 20px;
   margin-top: 100px;
 }
 
-.ul{
+.ul {
   padding: 10px;
-  
 }
 </style>
-
