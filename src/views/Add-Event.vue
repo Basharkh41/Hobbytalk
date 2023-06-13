@@ -2,9 +2,9 @@
   <div>
     <h1>Add an Event</h1>
     <form @submit.prevent="handleSubmit">
-      <input type="datetime-local" v-model="event.time" placeholder="Time" />
-      <input type="text" v-model="event.place" placeholder="Place" />
-      <input type="text" v-model="event.sport" placeholder="Sport" />
+      <input type="datetime-local" v-model="event.time" placeholder="Time" required/>
+      <input type="text" v-model="event.place" placeholder="Place" required/>
+      <input type="text" v-model="event.sport" placeholder="Sport" required/>
       <input type="text" v-model="event.description" placeholder="Description" />
       <button type="submit">Add Event</button>
     </form>
@@ -36,7 +36,11 @@ export default {
         sport: "",
         description: "",
       };
+      this.navigatetoFeed();
     },
+    navigatetoFeed(){
+      this.$router.push("/feed")
+    }
   },
 };
 </script>

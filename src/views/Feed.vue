@@ -10,16 +10,13 @@
         <p>Wo: {{ event.place }}</p>
         <p>Was: {{ event.sport }}</p>
         <p>Beschreibung: {{ event.description }}</p>
-        <hr v-if="index !== eventList.length - 1" />
         <button
           @click="toggleAttendance(event)"
           :class="{ 'attended': event.attended }"
         >
           {{ event.attended ? 'Absagen' : 'Teilnehmen' }}
         </button>
-        <div>
-      <p>Wer macht mit: {{ totalAttendees }}</p>
-    </div>
+      <p>Wer macht mit: {{ event.attendanceCount }}</p>
         <hr v-if="index !== eventList.length - 1" />
       </div>
     </div>
@@ -54,28 +51,21 @@ export default {
       // clear up listener
       authListener();
     });
-  },
-  computed: {
-    eventList() {
-      return eventBus.state.eventList;
-    },
-    totalAttendees() {
-      return this.eventList.filter((event) => event.attended).length;
-    },
-  },
-  methods: {
-    toggleAttendance(event) {
+    const eventList = ref([]);
+
+eventList.value = eventBus.state.eventList;
+
+const toggleAttendance = (event) => {
       event.attended = !event.attended;
-    },
-  },
-  data() {
-    return {
-      eventList: [],
+      event.attendanceCount = event.attendanceCount || 0;
+      event.attendanceCount += event.attended ? 1 : -1;
     };
-  },
-  created() {
-    this.eventList = eventBus.state.eventList;
-  },
+
+return {
+  eventList,
+  toggleAttendance,
+};
+},
 };
 </script>
 
