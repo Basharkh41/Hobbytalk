@@ -1,47 +1,50 @@
 <template>
   <div>
     <h1>Add an Event</h1>
-    <form @submit.prevent="addEvent">
-      <input type="datetime-local" v-model="time" placeholder="Time" required />
-      <input type="text" v-model="place" placeholder="Place" required />
-      <input type="text" v-model="sport" placeholder="Sport" required />
-      <input
-        type="text"
-        v-model="description"
-        placeholder="description"
-        required
-      />
-      <input type="file" @change="onFileChange" />
-      <button type="submit" @click="addEvent()">Add Event</button>
+    <form @submit.prevent="handleSubmit">
+      <input type="datetime-local" v-model="event.time" placeholder="Time" />
+      <input type="text" v-model="event.place" placeholder="Place" />
+      <input type="text" v-model="event.sport" placeholder="Sport" />
+      <input type="text" v-model="event.description" placeholder="Description" />
+      <button type="submit">Add Event</button>
     </form>
     <router-link to="/feed">Back to Feed</router-link>
   </div>
 </template>
 
 <script>
+import eventBus from "@/eventBus";
+
 export default {
   data() {
     return {
-      time: "",
-      place: "",
-      sport: "",
-      beschreibung: "",
+      event: {
+        time: "",
+        place: "",
+        sport: "",
+        description: "",
+      },
     };
   },
   methods: {
-    addEvent() {
-      this.$router.push("/"); // Redirect to the Feed page
-      this.$emit("add-event", {
-        time: this.time,
-        place: this.place,
-        sport: this.sport,
-        description: this.description,
-      });
-      this.$router.push("/feed");
-    },
-    onFileChange(event) {
-      // Handle file change if needed
+    handleSubmit() {
+      const newEventList = [...eventBus.state.eventList, this.event];
+      eventBus.setEventList(newEventList);
+      this.event = {
+        time: "",
+        place: "",
+        sport: "",
+        description: "",
+      };
     },
   },
 };
 </script>
+
+
+
+
+
+
+
+

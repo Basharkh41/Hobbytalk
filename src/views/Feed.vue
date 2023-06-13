@@ -3,32 +3,39 @@
     <router-link to="/Add-Event">Add an event</router-link>
   </div>
   <div>
-    <ul>
-      <li v-for="event in events" :key="event.id">
-        <div>Wann: {{ event.time }}</div>
-        <div>Wo: {{ event.place }}</div>
-        <div>Was: {{ event.sport }}</div>
-        <div>Beschreibung:{{ event.description }}</div>
-        <br v-if="index !== events.length - 1" />
+    <h2>Event Details</h2>
+    <div v-if="eventList.length > 0">
+      <div v-for="(event, index) in eventList" :key="index">
+        <p>Wann: {{ event.time }}</p>
+        <p>Wo: {{ event.place }}</p>
+        <p>Was: {{ event.sport }}</p>
+        <p>Beschreibung: {{ event.description }}</p>
+        <hr v-if="index !== eventList.length - 1" />
+        <button
+          @click="toggleAttendance(event)"
+          :class="{ 'attended': event.attended }"
+        >
+          {{ event.attended ? 'Absagen' : 'Teilnehmen' }}
+        </button>
         <div>
-          Teilnehmen:
-          <button
-            :class="{ clicked: event.clicked }"
-            @click="toggleClick(event)"
-          >
-            {{ event.participants }}
-          </button>
-        </div>
-        <br />
-      </li>
-    </ul>
+      <p>Wer macht mit: {{ totalAttendees }}</p>
+    </div>
+        <hr v-if="index !== eventList.length - 1" />
+      </div>
+    </div>
+    <div v-else>
+      <p>No events added yet.</p>
+    </div>
+
   </div>
 </template>
 
 <script>
+import { onBeforeUnmount, ref } from "vue";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "vue-router";
-import { onBeforeUnmount } from "vue";
+import eventBus from "@/eventBus";
+
 
 export default {
   setup() {
@@ -37,73 +44,46 @@ export default {
       if (!user) {
         // not logged in
         alert(
-          "you must be logged in to view this. redirecting to the home page"
+          "You must be logged in to view this. Redirecting to the home page."
         );
         router.push("/");
       }
     });
+
     onBeforeUnmount(() => {
       // clear up listener
       authListener();
     });
   },
+  computed: {
+    eventList() {
+      return eventBus.state.eventList;
+    },
+    totalAttendees() {
+      return this.eventList.filter((event) => event.attended).length;
+    },
+  },
+  methods: {
+    toggleAttendance(event) {
+      event.attended = !event.attended;
+    },
+  },
   data() {
     return {
-      events: [],
+      eventList: [],
     };
   },
   created() {
-    this.events = [
-      {
-        id: 1,
-        time: "10:00 AM",
-        place: "Park",
-        sport: "Football",
-        description: "Friendly match between Team A and Team B",
-        participants: 0,
-        photo: "event1.jpg",
-        clicked: false,
-      },
-      {
-        id: 2,
-        time: "2:00 PM",
-        place: "Gymnasium",
-        sport: "Basketball",
-        description: "Training session for beginners",
-        photo: "event2.jpg",
-        participants: 0,
-        clicked: false,
-      },
-      {
-        id: 3,
-        time: "4:30 PM",
-        place: "Tennis Court",
-        sport: "Tennis",
-        description: "Tournament for intermediate players",
-        photo: "event3.jpg",
-        participants: 0,
-        clicked: false,
-      },
-    ];
-  },
-  methods: {
-    toggleClick(event) {
-      event.clicked = !event.clicked;
-      if (event.clicked) {
-        event.participants++;
-      } else {
-        if (event.participants > 0) {
-          event.participants--;
-        }
-      }
-    },
+    this.eventList = eventBus.state.eventList;
   },
 };
 </script>
 
+
 <style>
 button {
-  background-color: red;
+  background-color: green;
+
   border: none;
   color: white;
   padding: 10px 20px;
@@ -114,7 +94,7 @@ button {
   align-items: center;
 }
 
-.clicked {
-  background-color: #5cbf88;
+.attended {
+  background-color: red;
 }
 </style>
