@@ -72,16 +72,16 @@ return {
 
 <style>
 button {
-  background-color: green;
+  background-color: #FE4E69;
 
   border: none;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 4px;
+  padding: 10px 60px;
+  
+  border-radius: 499px;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  
 }
 
 .attended {
@@ -136,11 +136,8 @@ li, a{
   color: #FE4E69;
 }
 
-.Logout-button{
-  font-size: 18px;
-  height: 40px;
-  width: 70px;
-}
+
+
 
 .Logout-button:hover{
   color: #FE4E69;
