@@ -92,7 +92,6 @@ button {
   color: #000000;
   font-size: 20px;
   text-align: center;
-  margin-top: 5%;
   position: center;
 }
 h2{
@@ -100,7 +99,7 @@ h2{
   color: #fe4e69;
   font-size: 60px;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .attended {
@@ -123,5 +122,13 @@ h2{
 .teilnehmen {
   display: block;
   margin: 0 auto;
+  margin-top: 2%;
+}
+.teilnehmen:hover{
+  background-color: red;
+}
+
+p{
+  margin-top: 1%;
 }
 </style>

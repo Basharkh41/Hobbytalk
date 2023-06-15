@@ -40,9 +40,6 @@
 </template>
 
 <style scoped>
-.Home-Container {
-  padding: 50px;
-}
 h1 {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #fe4e69;
@@ -50,12 +47,16 @@ h1 {
   text-align: center;
   margin-top: 5%;
 }
+img{
+  margin-top: -350px;
+}
 .section h2 {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 30px;
   text-align: center;
   margin-top: 15%;
 }
+
 .section {
   margin-bottom: 5px;
   padding-right: 1000px;

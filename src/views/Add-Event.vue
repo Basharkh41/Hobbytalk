@@ -5,7 +5,7 @@
       <input type="datetime-local" v-model="event.time" placeholder="Time" required/>
       <input type="text" v-model="event.place" placeholder="Place" required/>
       <input type="text" v-model="event.sport" placeholder="Sport" required/>
-      <input type="text" v-model="event.description" placeholder="Description" />
+      <input type="text" v-model="event.description" placeholder="Description" required/>
       <button type="submit">Add Event</button>
     </form>
     <router-link to="/feed">Back to Feed</router-link>
