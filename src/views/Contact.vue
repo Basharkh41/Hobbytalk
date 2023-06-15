@@ -2,7 +2,7 @@
   <title>Contact</title>
   <main class="Contact-main">
     <div class="contact-container">
-      <h1>Contact With Us</h1>
+      <h1>Contact Us</h1>
       <p>
         Wir würden uns freuen, Ihre Fragen zu beantworten und<br />
         Ihnen zu helfen. nehmen Sie gerne Kontakt mit uns auf
@@ -50,10 +50,16 @@
 </template>
 
 <style scoped>
+
+
+.h1{
+  margin-left: 1000px;
+}
 * {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   font-size: 25px;
+  text-align: center;
 }
 
 .contact-container {
