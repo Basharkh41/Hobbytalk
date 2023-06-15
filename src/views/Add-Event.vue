@@ -48,7 +48,16 @@ export default {
 <style scoped>
 
 .button{
-  
+  width: 10%;
+  padding: 10px;
+  background-color: #FE4E69;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding-top: 10px;
+  margin-top: 40px;
+  cursor: pointer;
+  font-weight: bold;
 
 }
 </style>

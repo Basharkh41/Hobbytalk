@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div class="alles">
+  
+  <div class="add-event">
     <router-link to="/Add-Event">Add an event</router-link>
   </div>
   <div>
@@ -10,7 +12,7 @@
         <p>Wo: {{ event.place }}</p>
         <p>Was: {{ event.sport }}</p>
         <p>Beschreibung: {{ event.description }}</p>
-        <button
+        <button class="teilnehmen"
           @click="toggleAttendance(event)"
           :class="{ 'attended': event.attended }"
         >
@@ -25,6 +27,7 @@
     </div>
 
   </div>
+</div>
 </template>
 
 <script>
@@ -84,8 +87,41 @@ button {
   
 }
 
+.alles{
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5%;
+  position: center;
+}
+h2{
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #fe4e69;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 5%;
+}
+
 .attended {
   background-color: red;
 }
 
+.add-event{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+  
+  padding: 10px;
+  background-color: #FE4E69;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.teilnehmen {
+  display: block;
+  margin: 0 auto;
+}
 </style>

@@ -1,13 +1,13 @@
 <template>
   <div class="contact-header">
     <h1>
-      Welcome to Hobbymeet, a place where students with similair Interests could
+      Welcome to HobbyTalk, a place where students with similair Interests could
       meet eachother
     </h1>
   </div>
   <div class="Home-Container">
     <div class="section">
-      <h2>About Hobbymeet:</h2>
+      <h2>About HobbyTalk:</h2>
       <p></p>
     </div>
     <div class="section">
@@ -35,7 +35,7 @@
     </div>
   </div>
   <div class="footer">
-    <p>&copy; 2023 Hobbymeet. All rights reserved.</p>
+    <p>&copy; 2023 HobbyTalk. All rights reserved.</p>
   </div>
 </template>
 

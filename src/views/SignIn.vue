@@ -46,15 +46,51 @@ const signIn = () => { // we also renamed this method
 }
 </script>
 <style scoped>
-.login{
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+.Logo{
+  margin-right: auto;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+li, a{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+  font-weight: 800;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+
+h1{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+  font-size: 80px;
+  color: #FE4E69;
+  margin-top: 5%;
   text-align: center;
-  
+  margin-bottom: 40px;
+}
+.register-form{
+  text-align: center;
+}
+input{
+  text-align: center;
+  font-size: 20px;
+  color: #000000;
+  border-bottom: 2px solid;
+  border-color: #ffffff;
 }
 .login-button{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
   width: 10%;
   padding: 10px;
   background-color: #FE4E69;
-  color: #fff;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   padding-top: 10px;
@@ -67,16 +103,9 @@ const signIn = () => { // we also renamed this method
   color: #FE4E69;
   font-weight:bold;
 }
-li, a{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #fff;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
-  font-weight: 800;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
+.input-area{
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 </style>
