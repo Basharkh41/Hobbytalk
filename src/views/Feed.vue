@@ -28,6 +28,9 @@
 
   </div>
 </div>
+<div class="footer">
+    <p>&copy; 2023 HobbyTalk. All rights reserved.</p>
+  </div>
 </template>
 
 <script>
@@ -113,7 +116,7 @@ h2{
   background-color: #FE4E69;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  
   cursor: pointer;
   font-weight: bold;
 }
@@ -131,4 +134,11 @@ h2{
 p{
   margin-top: 1%;
 }
+
+.footer p {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: right;
+  font-size: 20px;
+  padding-top: 480px;
+  }
 </style>

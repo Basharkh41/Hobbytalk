@@ -45,7 +45,12 @@
           </table>
         </div>
       </div>
+      
     </div>
+    <div class="footer">
+    <p>&copy; 2023 HobbyTalk. All rights reserved.</p>
+  </div>
+
   </main>
 </template>
 
@@ -164,5 +169,11 @@ img {
 }
 td {
   font-size: 20px;
+}
+.footer p {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: right;
+  font-size: 20px;
+  margin-top: 100px;
 }
 </style>

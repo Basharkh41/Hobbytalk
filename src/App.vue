@@ -96,14 +96,22 @@ a{
 }
 
 .Logout-button{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
   font-size: 18px;
+  font-weight: 800;
   height: 40px;
   width: 70px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  margin-left: -80px;
 }
 
 .Logout-button:hover{
   color: #FE4E69;
-  background-color: black;
+  background-color: Transparent;
   cursor: pointer;
 }
 

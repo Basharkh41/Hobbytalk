@@ -47,6 +47,7 @@ export default {
 
 <style scoped>
 
+
 .alles{
   
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
