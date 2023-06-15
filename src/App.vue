@@ -55,7 +55,7 @@ const handleSignOut = () => {
   margin: 0;
   padding: 0;
 }
-li, a{
+a{
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;

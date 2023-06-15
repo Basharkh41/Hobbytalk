@@ -22,9 +22,9 @@
           <p>Samuel Lins, 4cWI</p>
         </div>
       </div>
-      <div class="sucuk">
+      <div class="goals">
         <h2>Our Goals</h2>
-        <div class="sucuk_li">
+        <div class="goals_li">
           <ul>
             <li>Make it easier for students to meet other students</li>
             <li>support practicing hobbies instead of being inactive</li>
@@ -46,18 +46,18 @@
 h1 {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #fe4e69;
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   margin-top: 5%;
 }
 .section h2 {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   margin-top: 15%;
 }
 .section {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding-right: 1000px;
 }
 
@@ -78,10 +78,10 @@ h1 {
   flex: 1;
 }
 
-.sucuk {
+.goals {
   padding-top: 10px;
 }
-.sucuk_li {
+.goals_li {
   padding-top: 100px;
   text-align: center;
   font-size: ;
