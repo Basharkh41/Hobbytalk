@@ -45,7 +45,7 @@ const signIn = () => { // we also renamed this method
     });
 }
 </script>
-<style>
+<style scoped>
 .login{
   text-align: center;
   
@@ -79,42 +79,4 @@ li, a{
   text-decoration: none;
 }
 
-.router-link{
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 45px 0%;
-  border-bottom: solid #FE4E69;
-}
-.nav_links{
-  list-style: none;
-}
-.Logo img{
-  position: absolute; 
-}
-.nav_links li {
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
-  display: inline-block;
-  padding: 0px 20px;
-}
-.nav_links li a{
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
-  transition: all 0.3s ease 0s;
-}
-.nav_links li a:hover{
-  color: #FE4E69;
-}
-
-.Logout-button{
-  font-size: 18px;
-  height: 40px;
-  width: 70px;
-}
-
-.Logout-button:hover{
-  color: #FE4E69;
-  background-color: black;
-  cursor: pointer;
-}
 </style>
